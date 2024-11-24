@@ -1,0 +1,13 @@
+基礎
+Node.JS
+HTML、CSS、Javascript
+npm
+Git
+
+延伸
+Bun｜pnpm
+typescript、tailwindcss
+webpack
+ESLint
+VSCODE Git｜GitHub
+
