@@ -1,13 +1,17 @@
 
-import path from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 import 'webpack-dev-server';
 
-
 const config: webpack.Configuration = {
+  entry: "./src/index.ts",
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/,
         use: [
@@ -17,14 +21,19 @@ const config: webpack.Configuration = {
       },
     ],
   },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'public') },
+        { from: "src/index.html", to: "index.html" },
+        { from: "src/assets", to: "assets" }
       ],
     }),
   ],
   devServer: {
+    watchFiles: ["src/**/*"],
     port: 3000
   },
 }
