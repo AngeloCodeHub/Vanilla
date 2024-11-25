@@ -1,8 +1,11 @@
 
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+import path from 'path';
+import CopyPlugin from 'copy-webpack-plugin';
+import webpack from 'webpack';
+import 'webpack-dev-server';
 
-module.exports = {
+
+const config: webpack.Configuration = {
   module: {
     rules: [
       {
@@ -21,4 +24,9 @@ module.exports = {
       ],
     }),
   ],
-};
+  devServer: {
+    port: 3000
+  },
+}
+
+export default config;
