@@ -1,4 +1,3 @@
-
 import CopyPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 import 'webpack-dev-server';
@@ -14,10 +13,7 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { modules: true } },
-        ],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
   },
