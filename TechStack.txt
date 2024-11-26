@@ -1,7 +1,1 @@
-Node.JS
-HTML、CSS、Javascript
-npm｜pnpm｜Bun
-webpack
-ESLint
-VSCODE Git｜GitHub
-
+React

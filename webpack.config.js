@@ -3,9 +3,17 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["./src/index.jsx"],
   module: {
     rules: [
+      {
+        test: /.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: { presets: ['@babel/preset-react'] }
+        }
+      },
       {
         test: /\.css$/i,
         use: [
