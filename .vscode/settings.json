@@ -10,4 +10,7 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
 }

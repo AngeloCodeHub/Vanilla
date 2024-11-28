@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vanilla</title>
+</head>
+
+<body>
+
+  <div id="app" class="grid justify-items-center">
+
+    <h1 class="text-4xl m-7">瀏覽器解析度</h1>
+
+    <p class="text-xl">寬度: <span id="width"></span> px</p>
+    <p class="text-xl">高度: <span id="height"></span> px</p>
+  </div>
+
+  <script>
+    const widthSpan = document.getElementById('width');
+    const heightSpan = document.getElementById('height');
+
+    function updateResolution() {
+      widthSpan.textContent = window.innerWidth;
+      heightSpan.textContent = window.innerHeight;
+      // requestAnimationFrame(updateResolution);
+    }
+
+    updateResolution();
+
+    addEventListener('resize', updateResolution);
+    // addEventListener('mousemove', updateResolution);
+  </script>
+
+  <!-- 以下這行webpack專用 -->
+  <script src="./main.js"></script>
+</body>
+
+
+</html>
