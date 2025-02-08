@@ -1,6 +1,9 @@
-BackEnd：Node.JS
-FrontEnd：HTML、CSS、Javascript
+Language：Javascript
 Package Manager：Yarn
-Bundler：webpack
-Linter：ESLint
-VSCODE Git｜GitHub
+FrameWork-BackEnd：Node.JS
+Library-Other：
+Bundler：Webpack
+Linter：ESLint9
+DataBase：MySQL
+Basic Knowledge：HTML、CSS、Javascript
+ProjectTools：VSCODE｜EMMET Git｜GitHub
