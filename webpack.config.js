@@ -1,10 +1,10 @@
-// import webpack from 'webpack';
-import { dirname, join,resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import CopyPlugin from 'copy-webpack-plugin';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const config = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: resolve(__dirname, 'dist'),
@@ -13,18 +13,13 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [
           'style-loader',
           { loader: 'css-loader', options: { modules: true } },
         ],
       }
     ],
-  },
-  devServer: {
-    static: { directory: join(__dirname, 'dist') },
-    watchFiles: ["src/**/*"],
-    port: 3000
   },
   plugins: [
     new CopyPlugin({
@@ -34,6 +29,12 @@ const config = {
         { from: "src/outerwebpack.js", to: "outerwebpack.js" }
       ],
     }),
-  ]
+  ],
+  devServer: {
+    static: { directory: join(__dirname, 'dist') },
+    watchFiles: ["src/**/*"],
+    port: 3000
+  },
+
 }
 export default config;

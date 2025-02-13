@@ -1,8 +1,11 @@
-Language：Javascript
-Package Manager：Yarn
+OS Admin：Windows
+WebServer：Apache
+Runtime：Node.JS
+Language：JavaScript
+Package Manager：YarnPKG
 FrameWork-BackEnd：Node.JS
-Library-Other：postcss
-Bundler：Webpack
+Library-Other：PostCSS
+Bundler：WebPack.JS
 Linter：ESLint9
 DataBase：MySQL
 Basic Knowledge：HTML、CSS、Javascript
